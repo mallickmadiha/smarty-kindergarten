@@ -133,7 +133,7 @@ a:hover {
   border-radius: 5rem;
   margin-left: 1vw;
   margin-right: 1vw;
-  padding: 1.5rem 4rem;
+  padding: 1.5vw 4vw;
 }
 
 .coreValues__card__body__heading {
@@ -164,7 +164,7 @@ a:hover {
 
 .white-card {
   display: flex;
-  padding: 3rem 1.2rem;
+  padding: 3vw 1.2vw;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -297,40 +297,28 @@ a:hover {
 
 
 @media screen and (max-width: 700px) {
-  .top-nav__lastItem {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .banner {
+  .banner__image {
     height: 30vh;
-  }
-
-  .phone-banner {
-    display: block;
   }
 
   .banner__leftBox {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  .banner__leftBox {
     padding: 5vw 6.5vw;
   }
 
-  .banner__leftBox-heading {
+  .banner__leftBox__heading {
     font-size: 7vw;
     margin-bottom: 2vw;
   }
 
-  .banner__leftBox-text {
+  .banner__leftBox__text {
     font-size: 3.5vw;
     margin-bottom: 3vw;
   }
 
-  .banner__leftBox-button {
+  .banner__leftBox__button {
     padding: 1.8vw 4vw;
     font-size: 2.3vw;
   }
@@ -341,10 +329,6 @@ a:hover {
   .copyright {
     font-size: 0.7rem;
   }
-
-  .copyright__link {
-    font-size: 0.7rem;
-  }
 }
 
 @media (max-width: 570px) {
@@ -353,6 +337,12 @@ a:hover {
     padding: 1.5rem 2rem;
   }
 
+  .third {
+    margin-top: 0rem;
+  }
+}
+
+@media (max-width: 1021px) {
   .about__text {
     margin-bottom: 4rem;
     margin-left: 5.5vw;
@@ -362,10 +352,6 @@ a:hover {
     hyphens: auto;
     font-weight: 500;
     line-height: 2rem;
-  }
-
-  .third {
-    margin-top: 0rem;
   }
 }
 
@@ -388,11 +374,10 @@ a:hover {
     max-width: 2200px;
     margin: auto;
   }
-
 }
 
 @media (min-width: 478px) and (max-width: 700px) {
-  .banner {
+  .banner__image {
     height: 17rem;
   }
 }
