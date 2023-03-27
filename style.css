@@ -34,7 +34,6 @@ a:hover {
   flex-direction: row;
   cursor: pointer;
   column-gap: 1rem;
-  margin: 0 0.5rem;
   color: white;
 }
 
@@ -82,7 +81,7 @@ a:hover {
 
 .banner__leftBox {
   position: absolute;
-  z-index: 1;
+ 
   background-color: rgba(255, 255, 255, 0.6);
   top: 50%;
   transform: translate(0, -50%);
@@ -319,7 +318,6 @@ a:hover {
 }
 
 @media (max-width: 428px) {
-
   .copyright,
   .copyright__link {
     font-size: 10px;
@@ -327,7 +325,6 @@ a:hover {
 }
 
 @media (max-width: 570px) {
-
   .core__card {
     padding: 1.5rem 2rem;
   }
@@ -351,7 +348,6 @@ a:hover {
 }
 
 @media (max-width: 320px) {
-
   .core__card {
     padding: 1.5rem 1rem;
   }
@@ -407,7 +403,6 @@ a:hover {
 }
 
 @media (min-width: 1750px) {
-
   .banner__image {
     height: 55.5vh;
   }
