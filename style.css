@@ -9,26 +9,18 @@ li {
   padding: 0 !important;
 }
 
-a {
-  text-decoration: none !important;
-}
-
+a,
 a:hover {
   text-decoration: none !important;
 }
 
-.top-nav {
+.navigation {
   padding: 10px 15px;
   background-color: #f66582;
 }
 
-.top-nav__itemList {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-}
-
-.top-nav__itemList__item {
+.navigation__link,
+.navigation__item {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -37,10 +29,17 @@ a:hover {
   color: white;
 }
 
-.top-nav__itemList__item:hover {
+.navigation__link:hover,
+.navigation__item:hover {
   transform: scale(1.1);
   transition: 0.3s;
   color: white;
+}
+
+.navigation__menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .navbar__brand {
@@ -76,12 +75,10 @@ a:hover {
 .banner__image {
   width: 100%;
   height: 29rem;
-
 }
 
-.banner__leftBox {
+.banner__box {
   position: absolute;
- 
   background-color: rgba(255, 255, 255, 0.6);
   top: 50%;
   transform: translate(0, -50%);
@@ -89,7 +86,7 @@ a:hover {
   padding: 3.5rem 3.5rem;
 }
 
-.banner__leftBox__heading {
+.banner__heading {
   font-size: 2.8rem;
   font-weight: 600;
   color: #5c549e;
@@ -98,32 +95,32 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-.banner__leftBox__text {
+.banner__text {
   font-size: 1.4rem;
   margin-bottom: 2.5rem;
   font-weight: 500;
   color: rgb(73, 73, 73);
   word-spacing: 1px;
   white-space: nowrap;
-
 }
 
-.banner__leftBox__button {
+.banner__button {
   background-color: #5c549e;
   color: white;
   padding: 0.6rem 1.5rem;
   font-size: 1.1rem;
   letter-spacing: 1px;
   border: none;
+  cursor: pointer;
   text-decoration: none;
 }
 
-.banner__leftBox__button:hover {
+.banner__button:hover {
   transition: all 0.3s ease-in-out;
   transform: scale(1.1);
 }
 
-.core__heading {
+.core__head {
   font-size: 2.2rem;
   font-weight: bold;
   word-spacing: 10px;
@@ -144,24 +141,32 @@ a:hover {
   padding: 1.5vw 4vw;
 }
 
-.core__card__heading {
+.core__heading {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 2rem 0 0rem 0;
   margin-bottom: 1rem;
 }
 
-.core__card__text {
+.core__text {
   font-size: 1.2rem;
   color: #f2f2f2ea;
   padding-bottom: 1rem;
 }
 
-.green-card {
+.core__card--green {
   background-color: #9acb3b;
 }
 
-.white-card {
+.core__card--orange {
+  background-color: #f8ae31;
+}
+
+.core__card--pink {
+  background-color: #f56564;
+}
+
+.core__card--white {
   display: flex;
   padding: 3vw 0.5vw;
   justify-content: center;
@@ -171,7 +176,7 @@ a:hover {
   hyphens: auto;
 }
 
-.white-card__text {
+.core__text--white {
   font-size: 1.18rem;
   color: #171717;
   font-weight: 400;
@@ -179,7 +184,7 @@ a:hover {
   line-height: 1.8rem;
 }
 
-.white-card__heading {
+.core__heading--white {
   margin-top: -5rem;
   font-size: 2rem;
   font-weight: 500;
@@ -190,20 +195,12 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
-.orange-card {
-  background-color: #f8ae31;
-}
-
-.pink-card {
-  background-color: #f56564;
-}
-
-.core__card__image {
+.core__image {
   margin-top: -4rem;
   border-radius: 50%;
 }
 
-.about__text {
+.about {
   margin-bottom: 4rem;
   margin-left: 4.1rem;
   margin-right: 4.1rem;
@@ -220,7 +217,7 @@ a:hover {
   background-color: #5851a1;
 }
 
-.footer__container__para {
+.footer__para {
   padding: 1rem 0rem;
   opacity: 0.7;
   color: #f2f2f2ea;
@@ -229,25 +226,25 @@ a:hover {
   max-width: 350px;
 }
 
-.footer__container__item {
+.footer__menu {
   list-style: none;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  row-gap: 0.5rem
+  row-gap: 0.5rem;
 }
 
-.footer__container__socials {
+.footer__socials {
   display: flex;
   justify-content: space-around;
   max-width: 180px;
 }
 
-.third {
+.footer__menu--third {
   margin-top: 3.7rem !important;
 }
 
-.footer__container__item__heading {
+.footer__heading {
   color: #f2d80a;
   font-weight: bold;
   font-size: 1.5rem;
@@ -255,20 +252,20 @@ a:hover {
   padding-bottom: 1rem !important;
 }
 
-.footer__container__item__writing-pink {
+.footer__link {
   color: #e55a9e;
   font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.footer__container__item__text {
+.footer__text {
   font-size: 1.15rem;
   color: #fff;
   hyphens: auto;
 }
 
-.footer__container__item__writing {
+.footer__writing {
   display: flex;
   align-items: center;
   hyphens: auto;
@@ -289,35 +286,40 @@ a:hover {
   font-size: 16px;
 }
 
+.copyright__link:hover {
+  color: #e55a9e;
+}
+
 @media screen and (max-width: 700px) {
   .banner__image {
     height: 30vh;
   }
 
-  .banner__leftBox {
+  .banner__box {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 5vw 6.5vw;
   }
 
-  .banner__leftBox__heading {
+  .banner__heading {
     font-size: 7vw;
     margin-bottom: 2vw;
   }
 
-  .banner__leftBox__text {
+  .banner__text {
     font-size: 3.5vw;
     margin-bottom: 3vw;
   }
 
-  .banner__leftBox__button {
+  .banner__button {
     padding: 1.8vw 4vw;
     font-size: 2.3vw;
   }
 }
 
 @media (max-width: 428px) {
+
   .copyright,
   .copyright__link {
     font-size: 10px;
@@ -329,20 +331,20 @@ a:hover {
     padding: 1.5rem 2rem;
   }
 
-  .footer__container__item__writing {
+  .footer__writing {
     justify-content: center;
   }
 
-  .footer__container {
+  .footer {
     text-align: center;
   }
 
-  .footer__container__para,
-  .footer__container__socials {
+  .footer__para,
+  .footer__socials {
     max-width: unset;
   }
 
-  .third {
+  .footer__menu--third {
     margin-top: 0rem !important;
   }
 }
@@ -352,17 +354,17 @@ a:hover {
     padding: 1.5rem 1rem;
   }
 
-  .white-card__heading {
+  .core__heading--white {
     font-size: 1.5rem;
   }
 
-  .top-nav__itemList__item span {
+  .navigation__item span {
     font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
-  .top-nav ul {
+  .navigation ul {
     flex-direction: column;
   }
 
@@ -372,7 +374,7 @@ a:hover {
 }
 
 @media (max-width: 1021px) {
-  .about__text {
+  .about {
     margin-bottom: 4rem;
     margin-left: 5.5vw;
     margin-right: 5.5vw;
@@ -392,10 +394,8 @@ a:hover {
 }
 
 .core,
-.top-nav__itemList,
 .navbar,
-.about,
-.top-nav__container,
+.navigation__container,
 .footer__container,
 .core__card {
   max-width: 1450px;
@@ -411,7 +411,7 @@ a:hover {
     padding: 1.2rem;
   }
 
-  .banner__leftBox {
+  .banner__box {
     position: absolute;
     top: 50%;
     left: 50%;
