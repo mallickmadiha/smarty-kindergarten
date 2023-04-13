@@ -320,17 +320,33 @@
   }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 576px) {
   .core-card {
     padding: 1.5rem 2rem;
   }
 
-  .footer__writing {
+  .footer__nav {
+    display: flex;
     justify-content: center;
+  }
+
+
+
+  .footer__writing {
+    align-self: start;
   }
 
   .footer {
     text-align: center;
+  }
+
+  .footer__heading {
+    text-align: center
+  }
+
+  .footer__menu {
+    margin: auto;
+    text-align: left;
   }
 
   .footer__para,
@@ -377,7 +393,7 @@
   }
 }
 
-@media (max-width: 1308px) and (min-width: 760px) {
+@media (max-width: 1308px) {
   .core-card {
     margin-left: 0;
     margin-right: 0;
