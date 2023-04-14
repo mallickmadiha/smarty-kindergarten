@@ -214,6 +214,9 @@ body {
 .footer {
   padding-top: 1.2rem;
   background-color: #5851a1;
+}
+
+footer {
   margin-top: auto;
 }
 
