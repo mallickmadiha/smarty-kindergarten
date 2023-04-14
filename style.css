@@ -3,6 +3,12 @@
   font-size: 16px;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .navigation {
   padding: 10px 15px;
   background-color: #f66582;
@@ -208,6 +214,7 @@
 .footer {
   padding-top: 1.2rem;
   background-color: #5851a1;
+  margin-top: auto;
 }
 
 .footer__para {
@@ -325,23 +332,9 @@
     padding: 1.5rem 2rem;
   }
 
-  .footer__nav {
-    display: flex;
-    justify-content: center;
-  }
-
-
-
-  .footer__writing {
-    align-self: start;
-  }
-
-  .footer {
-    text-align: center;
-  }
-
+  .footer,
   .footer__heading {
-    text-align: center
+    text-align: center;
   }
 
   .footer__menu {
@@ -406,7 +399,6 @@
   .core-card__text {
     font-size: 1rem;
   }
-
 }
 
 .core,
