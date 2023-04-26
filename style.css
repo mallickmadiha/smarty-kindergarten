@@ -437,3 +437,9 @@ footer {
     height: 19rem;
   }
 }
+
+@media (min-width: 1200px) {
+  .footer__link{
+    font-size: 1.05rem;
+  }
+}
