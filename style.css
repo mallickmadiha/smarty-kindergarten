@@ -20,7 +20,6 @@ body {
   display: flex;
   align-items: center;
   flex-direction: row;
-  cursor: pointer;
   column-gap: 1rem;
   color: white;
 }
@@ -167,8 +166,6 @@ body {
 .core-card--white {
   display: flex;
   padding: 3vw 0.5vw;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   text-align: center;
   hyphens: auto;
@@ -199,10 +196,7 @@ body {
 }
 
 .about {
-  margin-bottom: 6rem;
-  margin-top: 3rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin: 3rem 4rem 6rem 4rem;
   font-size: 1.39rem;
   word-spacing: 6px;
   hyphens: auto;
@@ -245,7 +239,7 @@ footer {
   max-width: 180px;
 }
 
-.footer__socials img{
+.footer__socials img {
   width: 35px;
 }
 
@@ -257,24 +251,43 @@ footer {
 }
 
 .footer__link {
+  color: #cccce2;
+  font-size: 1rem;
+}
+
+.footer__link:hover {
+  color: #cccce2;
+}
+
+.footer__link--pink {
   color: #e55a9e;
   font-weight: 600;
   font-size: 0.9rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
+.footer__link--pink:hover {
+  color: #e55a9e;
+}
+
+.footer__link:hover,
+.footer__link--pink:hover {
+  text-decoration: none;
+}
 .footer__text {
   font-size: 1.15rem;
   color: #fff;
   hyphens: auto;
 }
 
+.footer__text:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
 .footer__writing {
   display: flex;
   align-items: center;
   hyphens: auto;
-  cursor: pointer;
   flex-direction: row;
   color: #cccce2;
 }
@@ -379,9 +392,7 @@ footer {
 
 @media (max-width: 1021px) {
   .about {
-    margin-bottom: 4rem;
-    margin-left: 5.5vw;
-    margin-right: 5.5vw;
+    margin: 0 5.5vw 4rem;
     font-size: 1rem;
     word-spacing: 3px;
     hyphens: auto;
@@ -438,7 +449,7 @@ footer {
 }
 
 @media (min-width: 1200px) {
-  .footer__link{
+  .footer__link--pink {
     font-size: 1.05rem;
   }
 }
